@@ -6,29 +6,29 @@ import { CgProfile } from "react-icons/cg";
 
 function Navbar() {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow">
+    <div className="fixed top-0 left-0 right-0 z-50  bg-white shadow">
       <div className="flex justify-between items-center border-b px-4 py-4">
         <div className="logo">
           <a href="/">
-            <img className="w-44" src={express24} alt="" />
+            <img className="w-44 hidden lg:flex" src={express24} alt="" />
           </a>
         </div>
         <div className="search flex justify-between items-center gap-5 relative">
-          <CiSearch className="w-5 h-5 ml-3 absolute" />
+          <CiSearch className="w-5 hidden lg:flex h-5 ml-3 absolute" />
           <input
             type="search"
             placeholder="Заведение, блюдо, товар или кухня"
-            className="input pl-10 input-bordered w-[1400px] max-w-xs"
+            className="input hidden lg:flex pl-10 input-bordered w-[1400px] max-w-xs"
           />
-          <button className="btn btn-warning rounded-xl mr-5">Найти</button>
-          <HiOutlineLocationMarker className="absolute w-6 h-6 right-[260px]" />
-          <select className="select select-bordered w-[300px] pl-12 max-w-xs">
+          <button className="btn hidden lg:flex btn-warning rounded-xl mr-5">Найти</button>
+          <HiOutlineLocationMarker className="absolute hidden lg:flex w-6 h-6 right-[260px]" />
+          <select className="select  select-bordered w-[300px]  lg:pl-12 max-w-xs">
             <option disabled selected>
               г. Ташкент, Мирабад район, Амира Темура проспект
             </option>
           </select>
         </div>
-        <div className="profile flex justify-between items-center gap-2">
+        <div className="profile hidden  lg:flex justify-between items-center gap-2">
           <div className="language border-l border-r">
             <div className="dropdown dropdown-bottom dropdown-end">
               <div

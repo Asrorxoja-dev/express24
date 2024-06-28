@@ -99,15 +99,15 @@ function Restoran() {
     <div>
       <h2 className="text-4xl font-bold mb-5">Рестораны</h2>
       <div className="flex justify-between">
-        <div className="btn-Group flex gap-4 mb-10">
-          <button className="btn"><FcLike className="w-4 h-4" /> Избранные</button>
-          <button className="btn">Акции</button>
-          <button className="btn">Новинки</button>
-          <button className="btn">Fast Food</button>
-          <button className="btn">Азиатская</button>
-          <button className="btn">Кофейня</button>
-          <button className="btn">Пиццерия</button>
-          <button className="btn">Бургерная</button>
+        <div className="btn-Group carousel flex gap-4 mb-10">
+          <button className="btn carousel-item"><FcLike className="w-4 h-4" /> Избранные</button>
+          <button className="btn carousel-item max-w-xs">Акции</button>
+          <button className="btn carousel-item max-w-xs">Новинки</button>
+          <button className="btn carousel-item max-w-xs">Fast Food</button>
+          <button className="btn carousel-item max-w-xs">Азиатская</button>
+          <button className="btn hidden lg:flex">Кофейня</button>
+          <button className="btn hidden lg:flex">Пиццерия</button>
+          <button className="btn hidden lg:flex">Бургерная</button>
         </div>
         <select className="select select-bordered w-28 max-w-xs">
           <option disabled selected>Еще</option>
@@ -120,7 +120,7 @@ function Restoran() {
           <option>Мороженое</option>
         </select>
       </div>
-      <div className="grid grid-cols-3 gap-7">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
         {imageArray.map((image, index) => (
           <div key={index} className="card bg-base-100 w-[350] shadow-xl">
             <figure>
@@ -158,7 +158,7 @@ function Restoran() {
 
       <div className="Время окрошки">
         <h2 className="text-4xl font-bold mb-5 mt-10">Время окрошки</h2>
-        <div className="grid grid-cols-6 gap-3">
+        <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-2 gap-3">
           {dataArray.map((image, index) => (
             <div key={index} className="card bg-base-200 p-2 mb-10 w-40 shadow-xl">
               <figure>
@@ -179,7 +179,7 @@ function Restoran() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-7">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
         {Array.map((image, index) => (
           <div key={index} className="card bg-base-100 w-[350] shadow-xl">
             <figure>
