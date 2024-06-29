@@ -18,11 +18,11 @@ function Footer() {
                 </h3>
            </div>
            </div>
-            <div className="hidden lg:flex justify-center pr-5 pt-5 flex-wrap-reverse gap-5 mt-10" >
+            <div className="hidden lg:flex justify-center text-sm lg:text-[14px] pr-5 pt-5 flex-wrap-reverse gap-5 mt-10" >
                 <FaInstagram className="w-5 h-5 cursor-pointer  text-slate-400"/>
                 <FaFacebookF className="w-5 h-5 cursor-pointer  text-slate-400"/>
                 <BiLogoTelegram className="w-5 h-5 cursor-pointer  text-slate-400"/>
-                <h3 className="font-semibold hidden lg:flex  text-slate-400"><span className="w-6">Ⓒ</span> 2024 Express24</h3>
+                <h3 className=" hidden lg:flex  text-slate-400"><p className="w-5">Ⓒ</p> 2024 Express24</h3>
             </div>
             </div>
           
