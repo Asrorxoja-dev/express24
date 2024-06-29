@@ -2,8 +2,8 @@ import express24 from "../assets/express24.jpeg";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { TfiWorld } from "react-icons/tfi";
-import { CgProfile } from "react-icons/cg";
 
+import { TbUserSquareRounded } from "react-icons/tb";
 function Navbar() {
   
   return (
@@ -85,7 +85,7 @@ modal.showModal()
 const modal = document.getElementById('my_modal_3') as HTMLDialogElement
 modal.showModal()
 }}>         <div className="text-slate-500">
-    <div>  <CgProfile className="w-5 h-5 mx-auto" /></div>
+    <div>  <TbUserSquareRounded  className="w-6 h-6 mx-auto"/> </div>
     <div><p className="mt-1">Профиль</p></div>
 </div>
   </button><dialog id="my_modal_3" className="modal">
