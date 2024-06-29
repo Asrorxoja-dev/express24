@@ -70,9 +70,9 @@ function Hero() {
           <div ref={magazineCarouselRef} className="carousel flex items-center gap-4 overflow-x-auto">
             {magazineImages.map((img, index) => (
               <div className='carousel-image rounded-xl overflow-hidden flex-shrink-0' key={index} style={{ width: '200px', height: '200px' }}>
-                <img className='w-full object-cover' src={img} alt={`magazine-img-${index}`} />
+                <img className='w-full rounded-b-lg object-cover' src={img} alt={`magazine-img-${index}`} />
                 <h3 className='font-semibold'>Full Cart</h3>
-                <p className='text-sm text-gray-500'>Продукты</p>
+                <p className='text-sm text-gray-500 text-[12px]'>Продукты</p>
               </div>
             ))}
           </div>

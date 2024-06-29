@@ -1,6 +1,6 @@
 import { FcLike } from "react-icons/fc";
 import { CiStar } from "react-icons/ci";
-
+import { useState } from "react";
 
 import rsImage1 from '../assets/restoran/Wgg40t3hDUFAzI78jUHQ-.jpg';
 import rsImage2 from '../assets/restoran/Y3BD-gLQRI8iuJsl_2CaD.jpg';
@@ -38,42 +38,48 @@ import logo15 from '../assets/logo/wgv-74k4RI8nLU1tCCDlq.jpg';
 
 import heart from '../assets/heart.png';
 const imageArray = [
-  { src: rsImage1, title: "Ploff&Kebab", description: "Узбекская Акции", rating: 4.5 },
-  { src: rsImage2, title: "ШЕФ BURGER", description: "Узбекская Акции", rating: 4.0 },
-  { src: rsImage3, title: "ШЕФ BURGER", description: "Узбекская Акции", rating: 3.5 },
-  { src: rsImage4, title: "Куранты Кафе Бар", description: "Узбекская Акции", rating: 4.2 },
-  { src: rsImage5, title: "BS cafe", description: "Узбекская Акции", rating: 4.8 },
-  { src: rsImage6, title: "TADAGO", description: "Узбекская Акции", rating: 4.1 },
-  { src: rsImage7, title: "Куранты Кафе Бар", description: "Узбекская Акции", rating: 4.3 },
-  { src: rsImage8, title: "RШЕФ BURGER", description: "Узбекская Акции", rating: 3.8 },
-  { src: rsImage9, title: "BS cafe", description: "Узбекская Акции", rating: 4.7 },
-  { src: rsImage10, title: "Ploff&Kebab", description: "Узбекская Акции", rating: 4.6 },
-  { src: rsImage11, title: "Куранты Кафе Бар", description: "Узбекская Акции", rating: 3.9 },
-  { src: rsImage12, title: "TADAGO", description: "Узбекская Акции", rating: 4.0 },
-  { src: rsImage13, title: "Куранты Кафе Бар", description: "Узбекская Акции", rating: 4.4 },
-  { src: rsImage14, title: "Ploff&Kebab", description: "Узбекская Акции", rating: 4.2 },
-  { src: rsImage15, title: "TADAGO", description: "Узбекская Акции", rating: 4.1 },
+  { src: rsImage1, title: "Ploff&Kebab", description: "Узбекская", rating: 4.5 },
+  { src: rsImage2, title: "ШЕФ BURGER", description: "Узбекская", rating: 4.2 },
+  { src: rsImage3, title: "ШЕФ BURGER", description: "Узбекская", rating: 3.5 },
+  { src: rsImage4, title: "Куранты Кафе Бар", description: "Узбекская", rating: 4.2 },
+  { src: rsImage5, title: "BS cafe", description: "Узбекская", rating: 4.8 },
+  { src: rsImage6, title: "TADAGO", description: "Узбекская", rating: 4.1 },
+  { src: rsImage7, title: "Куранты Кафе Бар", description: "Узбекская", rating: 4.3 },
+  { src: rsImage8, title: "RШЕФ BURGER", description: "Узбекская", rating: 3.8 },
+  { src: rsImage9, title: "BS cafe", description: "Узбекская", rating: 4.7 },
+  { src: rsImage10, title: "Ploff&Kebab", description: "Узбекская", rating: 4.6 },
+  { src: rsImage11, title: "Куранты Кафе Бар", description: "Узбекская", rating: 3.9 },
+  { src: rsImage12, title: "TADAGO", description: "Узбекская", rating: 4.3 },
+  { src: rsImage13, title: "Куранты Кафе Бар", description: "Узбекская", rating: 4.4 },
+  { src: rsImage14, title: "Ploff&Kebab", description: "Узбекская", rating: 4.2 },
+  { src: rsImage15, title: "TADAGO", description: "Узбекская", rating: 4.1 },
 ];
 
 const dataArray = [
-  { src: rsImage1, title: "Ploff&Kebab", description: "Узбекская Акции", rating: 4.5 },
-  { src: rsImage2, title: "ШЕФ BURGER", description: "Узбекская Акции", rating: 4.0 },
-  { src: rsImage3, title: "ШЕФ BURGER", description: "Узбекская Акции", rating: 3.5 },
-  { src: rsImage4, title: "Куранты Кафе", description: "Узбекская Акции", rating: 4.2 },
-  { src: rsImage5, title: "BS cafe", description: "Узбекская Акции", rating: 4.8 },
-  { src: rsImage6, title: "TADAGO", description: "Узбекская Акции", rating: 4.1 },
+  { src: rsImage1, title: "Ploff&Kebab", description: "Узбекская", rating: 4.5 },
+  { src: rsImage2, title: "ШЕФ BURGER", description: "Узбекская", rating: 4.3 },
+  { src: rsImage3, title: "ШЕФ BURGER", description: "Узбекская", rating: 3.5 },
+  { src: rsImage4, title: "Куранты Кафе", description: "Узбекская", rating: 4.2 },
+  { src: rsImage5, title: "BS cafe", description: "Узбекская", rating: 4.8 },
+  { src: rsImage6, title: "TADAGO", description: "Узбекская", rating: 4.1 },
 ];
 
 const Array = [
-  { src: rsImage1, title: "Ploff&Kebab", description: "Узбекская Акции", rating: 4.5 },
-  { src: rsImage2, title: "ШЕФ BURGER", description: "Узбекская Акции", rating: 4.0 },
-  { src: rsImage3, title: "ШЕФ BURGER", description: "Узбекская Акции", rating: 3.5 },
-  { src: rsImage4, title: "Куранты Кафе Бар", description: "Узбекская Акции", rating: 4.2 },
-  { src: rsImage5, title: "BS cafe", description: "Узбекская Акции", rating: 4.8 },
-  { src: rsImage6, title: "TADAGO", description: "Узбекская Акции", rating: 4.1 },
-  { src: rsImage7, title: "Куранты Кафе Бар", description: "Узбекская Акции", rating: 4.3 },
-  { src: rsImage8, title: "RШЕФ BURGER", description: "Узбекская Акции", rating: 3.8 },
-  { src: rsImage9, title: "BS cafe", description: "Узбекская Акции", rating: 4.7 },
+  { src: rsImage1, title: "Ploff&Kebab", description: "Узбекская", rating: 4.5 },
+  { src: rsImage2, title: "ШЕФ BURGER", description: "Узбекская", rating: 4.3 },
+  { src: rsImage3, title: "ШЕФ BURGER", description: "Узбекская", rating: 3.5 },
+  { src: rsImage4, title: "Куранты Кафе Бар", description: "Узбекская", rating: 4.2 },
+  { src: rsImage5, title: "BS cafe", description: "Узбекская", rating: 4.8 },
+  { src: rsImage6, title: "TADAGO", description: "Узбекская", rating: 4.1 },
+  { src: rsImage7, title: "Куранты Кафе Бар", description: "Узбекская", rating: 4.3 },
+  { src: rsImage8, title: "RШЕФ BURGER", description: "Узбекская", rating: 3.8 },
+  { src: rsImage9, title: "BS cafe", description: "Узбекская", rating: 4.7 },
+  { src: rsImage10, title: "Ploff&Kebab", description: "Узбекская", rating: 4.6 },
+  { src: rsImage11, title: "Куранты Кафе Бар", description: "Узбекская", rating: 3.9 },
+  { src: rsImage12, title: "TADAGO", description: "Узбекская", rating: 4.3 },
+  { src: rsImage13, title: "Куранты Кафе Бар", description: "Узбекская", rating: 4.4 },
+  { src: rsImage14, title: "Ploff&Kebab", description: "Узбекская", rating: 4.2 },
+  { src: rsImage15, title: "TADAGO", description: "Узбекская", rating: 4.1 },
 ];
 
 const logos = [
@@ -95,6 +101,13 @@ const logos = [
 ];
 
 function Restoran() {
+  const [showAll, setShowAll] = useState(false);
+
+  const initialDisplayCount = 6;
+
+  const handleShowAll = () => {
+    setShowAll(true);
+  };
   return (
     <div>
       <h2 className="text-4xl font-bold mb-5">Рестораны</h2>
@@ -122,32 +135,32 @@ function Restoran() {
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
         {imageArray.map((image, index) => (
-          <div key={index} className="card bg-base-100 w-[350] shadow-xl">
+          <div key={index} className="card bg-base-100 w-[357] h-[315] shadow-xl">
             <figure>
             <div className="rounded-lg">
               {logos[index] && (
                 <img className="w-10 h-10 absolute top-2 rounded-lg right-2" src={logos[index].src} alt="logo" />
               )}
               </div>
-              <img src={image.src} alt={image.title} />
+              <img className="w-full" src={image.src} alt={image.title} />
             </figure>
             <div className="card p-3 relative">
               <div className="flex justify-between items-center">
                 <div>
-                  <h2 className="card-title">{image.title}</h2>
+                  <h2 className="card-title font-semibold">{image.title}</h2>
                 </div>
                 <div className="relative">
-                  <button className="btn w-14 rounded-full absolute bottom-1 right-1">
-                    <img className="w-5 h-5" src={heart} alt="" />
+                  <button className=" pt-3 pr-2 pb-3 pl-3.5  bg-slate-50  w-[45px] rounded-full absolute bottom-1 right-1">
+                    <img className="w-4 h-4" src={heart} alt="" />
                   </button>
                 </div>
               </div>
-              <p className="text-slate-600 font-sans">{image.description}</p>
-              <div className="card-actions justify-between items-center">
+              <p className="text-slate-400 ">{image.description}</p>
+              <div className="card-actions">
                 <div className="flex mt-3 items-center">
                   <button className="btn btn-sm w-16 rounded-3xl p-0">
                     <CiStar />
-                    <span>{image.rating}</span>
+                    <span className="text-[12px] text-slate-600">{image.rating}</span>
                   </button>
                 </div>
               </div>
@@ -157,12 +170,12 @@ function Restoran() {
       </div>
 
       <div className="Время окрошки">
-        <h2 className="text-4xl font-bold mb-5 mt-10">Время окрошки</h2>
+        <h2 className="text-2xl font-bold mb-5 mt-10">Время окрошки</h2>
         <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-2 gap-3">
           {dataArray.map((image, index) => (
             <div key={index} className="card bg-base-200 p-2 mb-10 w-40 shadow-xl">
               <figure>
-                <img className="w-64 h-32 object-cover" src={image.src} alt={image.title} />
+                <img className="w-64 h-32 rounded-md object-cover" src={image.src} alt={image.title} />
               </figure>
               <div className="card p-3">
                 <div className="flex justify-between items-center">
@@ -180,7 +193,7 @@ function Restoran() {
       </div>
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
-        {Array.map((image, index) => (
+        {Array.slice(0, showAll ? Array.length : initialDisplayCount).map((image, index) => (
           <div key={index} className="card bg-base-100 w-[350] shadow-xl">
             <figure>
               <div className="rounded-lg">
@@ -193,20 +206,20 @@ function Restoran() {
             <div className="card p-3 relative">
               <div className="flex justify-between items-center">
                 <div>
-                  <h2 className="card-title">{image.title}</h2>
+                  <h2 className="card-title font-semibold">{image.title}</h2>
                 </div>
                 <div className="relative">
-                  <button className="btn w-14 rounded-full absolute bottom-1 right-1">
-                    <img className="w-5 h-5" src={heart} alt="" />
+                  <button className="pt-3 pr-2 pb-3 pl-3.5  bg-slate-50  w-[45px] rounded-full absolute bottom-1 right-1">
+                    <img className="w-4 h-4" src={heart} alt="" />
                   </button>
                 </div>
               </div>
-              <p className="text-slate-600 font-sans">{image.description}</p>
+              <p className="text-slate-400">{image.description}</p>
               <div className="card-actions justify-between items-center">
                 <div className="flex mt-3 items-center">
                   <button className="btn btn-sm w-16 rounded-3xl p-0">
                     <CiStar />
-                    <span>{image.rating}</span>
+                    <span className="text-[12px] text-slate-600">{image.rating}</span>
                   </button>
                 </div>
               </div>
@@ -214,7 +227,16 @@ function Restoran() {
             </div>
           </div>
         ))}
+
+
       </div>
+      {!showAll && imageArray.length > initialDisplayCount && (
+        <div className="flex justify-center mt-10">
+          <button className="btn font-bold text-[16px]  w-full max-w-xs lg:max-w-6xl" onClick={handleShowAll}>
+            Показать еще
+          </button>
+        </div>
+      )}
     </div>
   );
 }
